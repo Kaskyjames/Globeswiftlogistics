@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlobeSwift Logistics - Effortless Global Deliveries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pfJ/0XGcQGpA6J16XfTXDJ9qlE3YohXjXw/5q1SgU4Qa2zMwiJt0Q8NUsO6Swn6o1jA4B++ceOi7YtE1kOZq4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--- Navigation Bar --->
+  <header class="site-header">
+  <div class="container">
+    <div class="logo">
+  <img src="images/logo.png" alt="GlobeSwift Logistics Logo" />
+      <span>GlobeSwift Logistics</span>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Book Delivery</a>
+      <a href="track.html">Track</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+  </div>
+  </header>
+
+  <!--- Hero Section --->
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Effortless Global Deliveries</h1>
+    <p>Your trusted partner for fast, secure, and reliable logistics solutions worldwide.</p>
+    <div class="hero-buttons">
+      <a href="booking.html" class="cta-button">Book Delivery</a>
+      <a href="track.html" class="secondary-button">Track Shipment</a>
+    </div>
+  </div>
+  </section>
+
+  <!--- About Section --->
+  <section class="about">
+  <div class="about-content fade-in">
+    <h2>About GlobeSwift Logistics</h2>
+    <p>At GlobeSwift Logistics, we deliver excellence across the globe. With years of experience in international shipping and courier services, our mission is to simplify logistics for individuals and businesses alike.</p>
+    <div class="about-features fade-in">
+      <div class="feature fade-in">
+        <h3>Global Reach</h3>
+        <p>We connect you to over 200 countries with reliable delivery solutions.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>Trusted Expertise</h3>
+        <p>Our dedicated team ensures your shipments arrive safely and on time.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>Customer Focused</h3>
+        <p>Transparent pricing, easy tracking, and responsive support.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!---- Service Section --->
+  <section class="services fade-in">
+  <div class="services-content">
+    <h2>Our Services</h2>
+    <p>From express courier to international freight, we handle your shipments with precision and care.</p>
+    <div class="service-cards">
+      <div class="service">
+        <i class="fas fa-shipping-fast"></i>
+        <h3>Express Courier</h3>
+        <p>Fast, door-to-door delivery within your city or across the country.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-truck"></i>
+        <h3>Freight Forwarding</h3>
+        <p>Seamless logistics for large shipments and business cargo.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-clock"></i>
+        <h3>Same-Day Delivery</h3>
+        <p>Urgent shipments delivered on the same day.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-globe"></i>
+        <h3>International Shipping</h3>
+        <p>Reliable connections to over 200 countries worldwide.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--- Pricing/Calculator Section --->
+  <section class="pricing fade-in">
+  <div class="pricing-content fade-in">
+    <h2>Transparent Pricing</h2>
+    <p>Know exactly what you’ll pay—no hidden fees, just clear and fair pricing.</p>
+    <div class="pricing-table">
+      <div class="pricing-tier">
+        <h3>Standard Delivery</h3>
+        <p class="price">$10 <span>per package</span></p>
+        <ul>
+          <li>Delivery within 3–5 days</li>
+          <li>Basic tracking</li>
+          <li>Email notifications</li>
+        </ul>
+      </div>
+      <div class="pricing-tier">
+        <h3>Express Delivery</h3>
+        <p class="price">$25 <span>per package</span></p>
+        <ul>
+          <li>Next-day delivery</li>
+          <li>Real-time tracking</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+      <div class="pricing-tier">
+        <h3>International Shipping</h3>
+        <p class="price">From $50 <span>per package</span></p>
+        <ul>
+          <li>5–10 days delivery</li>
+          <li>Customs handling</li>
+          <li>Insurance included</li>
+        </ul>
+      </div>
+    </div>
+    <a href="booking.html" class="cta-button">Get a Quote</a>
+  </div>
+  </section>
+
+  <!--- Booking Form Section --->
+  <section class="booking fade-in">
+  <div class="booking-content">
+    <h2>Book Your Delivery</h2>
+    <p>Fill out the form below to schedule a delivery. Our team will handle the rest!</p>
+    <form action="submit_booking.html" method="post" class="booking-form">
+      <div class="form-group">
+        <label for="sender-name">Sender's Name</label>
+        <input type="text" id="sender-name" name="sender-name" required>
+      </div>
+      <div class="form-group">
+        <label for="receiver-name">Receiver's Name</label>
+        <input type="text" id="receiver-name" name="receiver-name" required>
+      </div>
+      <div class="form-group">
+        <label for="package-weight">Package Weight (kg)</label>
+        <input type="number" id="package-weight" name="package-weight" required>
+      </div>
+      <div class="form-group">
+        <label for="delivery-type">Delivery Type</label>
+        <select id="delivery-type" name="delivery-type" required>
+          <option value="standard">Standard (3-5 days)</option>
+          <option value="express">Express (Next-day)</option>
+          <option value="international">International (5-10 days)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+      <button type="submit" class="cta-button">Submit Booking</button>
+    </form>
+  </div>
+  </section>
+
+  <!--- Tracking Section --->
+  <section class="tracking fade-in">
+  <div class="tracking-content">
+    <h2>Track Your Shipment</h2>
+    <p>Enter your tracking number below to get the latest status of your delivery.</p>
+    <form action="track-result.html" method="get" class="tracking-form">
+      <input type="text" name="tracking-number" placeholder="Tracking Number" required>
+      <button type="submit" class="cta-button">Track</button>
+    </form>
+  </div>
+  </section>
+
+  <!--- Testimonial section --->
+  <section class="testimonials">
+  <div class="testimonials-content">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-marquee">
+      <div class="testimonial-track">
+        <div class="testimonial">
+          <p>"GlobeSwift Logistics exceeded our expectations with fast, reliable deliveries every time."</p>
+          <h4>— Sarah Thompson., Business Owner</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Their tracking system keeps me updated, and their customer support is fantastic."</p>
+          <h4>— David King., E-commerce Seller</h4>
+        </div>
+        <div class="testimonial">
+          <p>"I trust GlobeSwift for all my international shipping needs. Highly recommended!"</p>
+          <h4>— Maria Lopez., Entrepreneur</h4>
+        </div>
+        <!-- Repeat the testimonials again to make it continuous -->
+        <div class="testimonial">
+          <p>"GlobeSwift Logistics exceeded our expectations with fast, reliable deliveries every time."</p>
+          <h4>— Sarah Thompson., Business Owner</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Their tracking system keeps me updated, and their customer support is fantastic."</p>
+          <h4>— David King., E-commerce Seller</h4>
+        </div>
+        <div class="testimonial">
+          <p>"I trust GlobeSwift for all my international shipping needs. Highly recommended!"</p>
+          <h4>— Maria Lopez., Entrepreneur</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--- FaQs Section --->
+  <section class="faqs">
+  <div class="faqs-content">
+    <h2>Frequently Asked Questions</h2>
+    <p>Here are answers to some of our most common questions.</p>
+    <div class="faq-item">
+      <button class="faq-question">How long does delivery take?</button>
+      <div class="faq-answer">
+        <p>Standard delivery takes 3–5 business days. Express and international options are faster.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How can I track my shipment?</button>
+      <div class="faq-answer">
+        <p>You can track your shipment anytime by entering your tracking number in the tracking section.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer insurance?</button>
+      <div class="faq-answer">
+        <p>Yes, all shipments include basic insurance, with additional coverage available upon request.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!--- Contact Section --->
+  <section class="contact">
+  <div class="contact-content">
+    <h2>Contact Us</h2>
+    <p>We’re here to help. Reach out to us anytime for questions or support.</p>
+    <div class="contact-wrapper">
+      <form action="submit_contact.html" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+      <div class="contact-details">
+        <h3>Our Office</h3>
+        <p>Bakersfield, California, USA</p>
+        <p><strong>Phone:</strong> (555) 123-4567</p>
+        <p><strong>Email:</strong> info@globeswiftlogistics.com</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+  <!--- Footer Section --->
+  <footer class="site-footer fade-in">
+  <div class="container">
+    <div class="footer-logo">
+  <img src="images/logo.png" alt="GlobeSwift Logistics Logo" />
+      <span>GlobeSwift Logistics</span>
+</div>
+<p>&copy; 2025 GlobeSwift Logistics. All rights reserved.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Book</a>
+      <a href="track.html">Track</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+  </div>
+    <div class="social-icons">
+  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+</body>
+          </html>
