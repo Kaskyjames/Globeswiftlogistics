@@ -1,6 +1,52 @@
 document.addEventListener('DOMContentLoaded', function () {
   const faqs = document.querySelectorAll('.faq');
   const searchInput = document.getElementById('faqSearchInput');
+  const faqCount = document.getElementById('faq-count');
+
+  faqCount.textContent = `${faqs.length} questions available`;
+
+  faqs.forEach(faq => {
+    const question = faq.querySelector('h3');
+    const answer = faq.querySelector('p');
+
+    answer.style.maxHeight = '0px';
+    answer.style.overflow = 'hidden';
+    answer.style.transition = 'max-height 0.4s ease';
+
+    question.addEventListener('click', () => {
+      const isOpen = faq.classList.contains('active');
+
+      if (isOpen) {
+        faq.classList.remove('active');
+        answer.style.maxHeight = '0px';
+      } else {
+        faq.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    let visibleCount = 0;
+
+    faqs.forEach(faq => {
+      const text = faq.querySelector('h3').textContent.toLowerCase() + ' ' +
+                   faq.querySelector('p').textContent.toLowerCase();
+      if (text.includes(query)) {
+        faq.style.display = '';
+        visibleCount++;
+      } else {
+        faq.style.display = 'none';
+      }
+    });
+
+    faqCount.textContent = `${visibleCount} question(s) found`;
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const faqs = document.querySelectorAll('.faq');
+  const searchInput = document.getElementById('faqSearchInput');
 
   faqs.forEach(faq => {
     const question = faq.querySelector('h3');
