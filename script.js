@@ -6,6 +6,48 @@ document.addEventListener('DOMContentLoaded', function () {
     const question = faq.querySelector('h3');
     const answer = faq.querySelector('p');
 
+    // Start hidden
+    answer.style.maxHeight = '0px';
+    answer.style.overflow = 'hidden';
+    answer.style.transition = 'max-height 0.4s ease';
+
+    question.addEventListener('click', () => {
+      const isOpen = faq.classList.contains('active');
+
+      if (isOpen) {
+        faq.classList.remove('active');
+        answer.style.maxHeight = '0px';
+      } else {
+        faq.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Search filter
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+
+    faqs.forEach(faq => {
+      const text = faq.querySelector('h3').textContent.toLowerCase() + ' ' +
+                   faq.querySelector('p').textContent.toLowerCase();
+      if (text.includes(query)) {
+        faq.style.display = '';
+      } else {
+        faq.style.display = 'none';
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const faqs = document.querySelectorAll('.faq');
+  const searchInput = document.getElementById('faqSearchInput');
+
+  faqs.forEach(faq => {
+    const question = faq.querySelector('h3');
+    const answer = faq.querySelector('p');
+
     question.addEventListener('click', () => {
       const isOpen = faq.classList.contains('active');
 
