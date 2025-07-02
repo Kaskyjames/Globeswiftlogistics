@@ -114,24 +114,85 @@ faqButtons.forEach(button => {
 });
 
 
-const steps = document.querySelectorAll(".form-step");
-const stepIndicators = document.querySelectorAll(".form-steps .step");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
-const submitBtn = document.getElementById("submitBtn");
 
-let currentStep = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("bookingForm");
+  const steps = document.querySelectorAll(".form-step");
+  const indicators = document.querySelectorAll(".form-steps .step");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const submitBtn = document.getElementById("submitBtn");
 
-function showStep(index) {
-  steps.forEach((step, i) => {
-    step.classList.toggle("current", i === index);
-    stepIndicators[i].classList.toggle("active", i === index);
+  let currentStep = 0;
+
+  // Initialize
+  updateForm();
+
+  // Next button
+  nextBtn.addEventListener("click", () => {
+    if (validateStep(currentStep)) {
+      currentStep++;
+      updateForm();
+    }
   });
 
-  prevBtn.style.display = index === 0 ? "none" : "inline-block";
-  nextBtn.style.display = index === steps.length -1 ? "none" : "inline-block";
-  submitBtn.style.display = index === steps.length -1 ? "inline-block" : "none";
-}
+  // Previous button
+  prevBtn.addEventListener("click", () => {
+    currentStep--;
+    updateForm();
+  });
+
+  // Form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (validateStep(currentStep)) {
+      alert("Booking submitted successfully!");
+      form.reset();
+      currentStep = 0;
+      updateForm();
+    }
+  });
+
+  function updateForm() {
+    // Hide all steps
+    steps.forEach((step) => step.classList.remove("current"));
+    // Show current step
+    steps[currentStep].classList.add("current");
+
+    // Update indicators
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentStep);
+    });
+
+    // Show/hide navigation buttons
+    prevBtn.style.display = currentStep === 0 ? "none" : "inline-block";
+    nextBtn.style.display = currentStep === steps.length - 1 ? "none" : "inline-block";
+    submitBtn.style.display = currentStep === steps.length - 1 ? "inline-block" : "none";
+  }
+
+  function validateStep(stepIndex) {
+    const step = steps[stepIndex];
+    const inputs = step.querySelectorAll("input, select, textarea");
+    let valid = true;
+
+    inputs.forEach((input) => {
+      if (input.hasAttribute("required") && !input.value.trim()) {
+        input.style.borderColor = "red";
+        valid = false;
+      } else {
+        input.style.borderColor = "#ccc";
+      }
+    });
+
+    if (!valid) {
+      alert("Please fill in all required fields.");
+    }
+
+    return valid;
+  }
+});
+
+
 
 // Event Listeners
 nextBtn.addEventListener("click", () => {
