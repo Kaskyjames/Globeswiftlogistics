@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('trackingForm');
+  const statusDiv = document.querySelector('.tracking-status');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Simple validation
+    const trackingNumber = form.querySelector('input[placeholder*="GS"]');
+    const consigneeContact = form.querySelector('input[placeholder*="email"]');
+
+    if (!trackingNumber.value.trim() || !consigneeContact.value.trim()) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    // Simulate tracking response
+    statusDiv.innerHTML = `
+      <p><strong>Status:</strong> In Transit</p>
+      <p><strong>Last Location:</strong> Frankfurt, Germany</p>
+      <p><strong>Estimated Delivery:</strong> ${new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toLocaleDateString()}</p>
+    `;
+    statusDiv.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
 // Reveal sections on scroll
 const faders = document.querySelectorAll('.fade-in');
 
