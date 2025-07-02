@@ -1,6 +1,122 @@
 /* FAQ Page Styles */
 body {
   font-family: 'Inter', sans-serif;
+  background: #eef2f7;
+  color: #2b2e4a;
+  margin: 0;
+  padding: 0;
+}
+
+.faqs-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.faqs-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1b3c59;
+}
+
+.faq-group {
+  margin-bottom: 40px;
+}
+
+.faq-group h2 {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  color: #0b7285;
+}
+
+.faq {
+  background: #ffffff;
+  border: 1px solid #dbe4ee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.faq h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  background: #dff6ff;
+  cursor: pointer;
+  position: relative;
+  color: #00334e;
+}
+
+.faq h3::after {
+  content: "\f078"; /* FontAwesome chevron-down */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.faq.active h3::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq p {
+  padding: 0 20px 15px;
+  margin: 0;
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Search Box */
+.faq-search {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.faq-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .faq h3 {
+    font-size: 1rem;
+  }
+  .faq-group h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* FAQ Page Styles */
+body {
+  font-family: 'Inter', sans-serif;
   background: #f9f9f9;
   color: #333;
   margin: 0;
