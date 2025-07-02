@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.querySelector('.contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      contactForm.reset();
+    });
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('trackingForm');
   const statusDiv = document.querySelector('.tracking-status');
