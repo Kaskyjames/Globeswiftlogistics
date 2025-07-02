@@ -1,3 +1,30 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const faqs = document.querySelectorAll('.faq');
+
+  faqs.forEach(faq => {
+    const question = faq.querySelector('h3');
+    const answer = faq.querySelector('p');
+
+    question.addEventListener('click', () => {
+      const isOpen = faq.classList.contains('active');
+
+      // Close all
+      faqs.forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('p').style.display = 'none';
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        faq.classList.add('active');
+        answer.style.display = 'block';
+      }
+    });
+  });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.querySelector('.contact-form');
 
