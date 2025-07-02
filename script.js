@@ -3,6 +3,46 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('faqSearchInput');
   const faqCount = document.getElementById('faq-count');
 
+  if (faqCount) {
+    faqCount.textContent = `${faqs.length} questions available`;
+  }
+
+  faqs.forEach(faq => {
+    const question = faq.querySelector('h3');
+    const answer = faq.querySelector('p');
+
+    question.addEventListener('click', () => {
+      faq.classList.toggle('active');
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      let visibleCount = 0;
+
+      faqs.forEach(faq => {
+        const text = faq.querySelector('h3').textContent.toLowerCase() + ' ' +
+                     faq.querySelector('p').textContent.toLowerCase();
+        if (text.includes(query)) {
+          faq.style.display = '';
+          visibleCount++;
+        } else {
+          faq.style.display = 'none';
+        }
+      });
+
+      if (faqCount) {
+        faqCount.textContent = `${visibleCount} question(s) found`;
+      }
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const faqs = document.querySelectorAll('.faq');
+  const searchInput = document.getElementById('faqSearchInput');
+  const faqCount = document.getElementById('faq-count');
+
   faqCount.textContent = `${faqs.length} questions available`;
 
   faqs.forEach(faq => {
