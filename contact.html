@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - GlobeSwift Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="GlobeSwift Logistics Logo" />
+        <span>GlobeSwift Logistics</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book Delivery</a>
+        <a href="track.html">Track</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="faqs.html">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Contact Section -->
+  <main class="contact-page fade-in">
+    <h1>Contact GlobeSwift Logistics</h1>
+    <p class="contact-info">
+      Have questions or need assistance? Our team is here to help you 24/7.
+    </p>
+
+    <section class="contact-details">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <p><strong>Email:</strong><br>
+          <a href="mailto:support@globeswiftlogistics.com">support@globeswiftlogistics.com</a></p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <p><strong>Phone:</strong><br>
+          +1 (555) 123-4567<br>
+          +44 (020) 9876 5432</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p><strong>Head Office Address:</strong><br>
+          123 Swift Lane,<br>
+          Bakersfield, CA, USA<br>
+          <em>(You can edit this address to your real location)</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- Embedded Google Map -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.9151679482233!2d-119.01871238475906!3d35.37329268028683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea6dc01e23f933%3A0x9e1ecddf9a7a5089!2sBakersfield%2C%20CA!5e0!3m2!1sen!2sus!4v1719189266744!5m2!1sen!2sus" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius:8px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <h2>Send Us a Message</h2>
+      <label>Your Name</label>
+      <input type="text" required>
+
+      <label>Your Email</label>
+      <input type="email" required>
+
+      <label>Your Phone (optional)</label>
+      <input type="tel">
+
+      <label>Your Message</label>
+      <textarea rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="GlobeSwift Logistics Logo" />
+        <span>GlobeSwift Logistics</span>
+      </div>
+      <p>&copy; 2025 GlobeSwift Logistics. All rights reserved.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book</a>
+        <a href="track.html">Track</a>
+        <a href="contact.html">Contact</a>
+        <a href="faqs.html">FAQs</a>
+      </nav>
+    </div>
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
