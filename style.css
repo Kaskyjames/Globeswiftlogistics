@@ -1,3 +1,203 @@
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f7f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+h1, h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.site-header {
+  background: #004080;
+  color: #fff;
+  padding: 1rem 0;
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .logo {
+  display: flex;
+  align-items: center;
+}
+.site-header .logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+.site-header nav a {
+  color: #fff;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-header nav a:hover,
+.site-header nav a.active {
+  text-decoration: underline;
+}
+
+/* Main Booking Form */
+.booking-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.booking-form h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.booking-form form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+}
+.booking-form form input,
+.booking-form form select,
+.booking-form form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.booking-form form input:focus,
+.booking-form form select:focus,
+.booking-form form textarea:focus {
+  outline: none;
+  border-color: #004080;
+}
+
+/* Form Steps Indicators */
+.form-steps {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.form-steps .step {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background: #ccc;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.form-steps .step.active {
+  background: #004080;
+}
+
+/* Hide All Steps by Default */
+.form-step {
+  display: none;
+}
+.form-step.current {
+  display: block;
+}
+
+/* Navigation Buttons */
+.form-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.form-navigation button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: #004080;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-navigation button:hover {
+  background: #0066cc;
+}
+#submitBtn {
+  display: none;
+}
+
+/* Footer */
+.site-footer {
+  background: #004080;
+  color: #fff;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.site-footer nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.site-footer nav a:hover {
+  text-decoration: underline;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-logo img {
+  height: 35px;
+  margin-right: 0.5rem;
+}
+.social-icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+.social-icons a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .site-header .container, .site-footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-footer nav {
+    justify-content: center;
+  }
+}
+
+
 /* Global Styles */
 :root {
   --primary-color: #0B3D91;
